@@ -10,7 +10,7 @@ loader = CSVLoader('medium.csv', encoding='utf-8', source_column="Text")
 articles = loader.load()
 
 # Split the text of the articles into smaller chunks
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=100)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=250)
 splitted_articles = text_splitter.split_documents(articles)
 
 # Check if the chroma path exists and delete
